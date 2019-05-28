@@ -1,0 +1,124 @@
+/**************************************************
+ * Constants                                      * 
+ **************************************************/
+:root {
+  --MUSTHAVE_BLUE:    #355A9C;
+  --MUSTHAVE_SECTION: powderblue;
+  --MUSTHAVE_ARTICLE: white;
+}
+
+/**************************************************
+ * Include the padding and border to all elements * 
+ **************************************************/
+* {
+  box-sizing: border-box; 
+}
+
+/********************************
+ * Default setting mobile first *
+ ********************************/
+body { 
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 100%;
+  font-family: 'Calibri', 'Arial', 'Helvetica'; 
+  color: black;
+}
+section {
+  padding: 10px;
+  background-color: var(--MUSTHAVE_SECTION);
+}
+article {
+  margin: 5px;
+  padding: 10px;
+  background-color: var(--MUSTHAVE_ARTICLE);
+}	
+h2 {
+  margin: 0px;
+  padding: 0px;
+  color: var(--MUSTHAVE_BLUE);
+}
+footer {
+  font-size: 0.80em;
+}
+
+/*************************
+ * Class                 *
+ *************************/
+.logo_text {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 0.77em;
+  color: orange;
+}
+.logo_image {
+  width: 260px;
+}	
+.newrow::after { /*start new row*//*clearfix*/
+  content: "";
+  clear: both;
+  display: table;
+}
+.column_article { 
+  float: left;
+  padding: 15px;
+  border: 1px solid black;
+}
+.column_company {
+  float: left;
+  background-color: white;
+}
+
+/*************************
+ * Media queries         *
+ *************************/
+@media only screen and (max-width: 340px)  { 
+
+    /*extra small device, width 0-340*/
+	/*default settings see above*/
+}
+@media only screen and (min-width: 340px) and (max-width: 768px) {
+	
+	/*small device, width 340-768*/
+	/*overwrite*/
+	.logo_text {
+	  font-size: 0.97em;
+	}
+	.logo_image {
+	  width: 320px;
+	}
+}
+@media only screen and (min-width: 768px) {
+
+	/*medium device and larger, width 768 and up*/
+	/*overwrite*/
+	
+	/*use a grid view*/
+	.col_01 {width: 8.33%;}
+	.col_02 {width: 16.66%;}
+	.col_03 {width: 25%;}
+	.col_04 {width: 33.33%;}
+	.col_05 {width: 41.66%;}
+	.col_06 {width: 50%;}
+	.col_07 {width: 58.33%;}
+	.col_08 {width: 66.66%;}
+	.col_09 {width: 75%;}
+	.col_10 {width: 83.33%;}
+	.col_11 {width: 91.66%;}
+	.col_12 {width: 100%;}
+
+	.logo_text {
+	  font-size: 1.20em;
+	}
+	.logo_image {
+	  width: 400px;
+	}
+	.column_company {
+	  padding-left: 25px;
+	}
+}
+
+
+
